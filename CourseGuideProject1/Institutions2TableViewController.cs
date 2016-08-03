@@ -29,5 +29,19 @@ namespace CourseGuideProject1
 			View.BackgroundColor = UIColor.Black;
 			Institution2Table.Source = new Institutions2TableViewSource(institutionsArray, rowColorArray);
 		}
+
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+		{
+			if (segue.Identifier.Equals("CampusSegue"))
+			{
+				var viewController = segue.DestinationViewController as CampusTableViewController;
+				if (viewController != null)
+				{
+					var rowPath = Institution2Table.IndexPathForSelectedRow;
+					var name = institutionsArray[rowPath.Row];
+					viewController.instituteName = name;
+				}
+			}
+		}
     }
 }
