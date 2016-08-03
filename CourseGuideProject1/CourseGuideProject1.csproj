@@ -129,6 +129,10 @@
       <DependentUpon>Institution1TableViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Institution1TableViewSource.cs" />
+    <Compile Include="CourseWebViewController.cs" />
+    <Compile Include="CourseWebViewController.designer.cs">
+      <DependentUpon>CourseWebViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

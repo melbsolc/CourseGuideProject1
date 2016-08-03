@@ -28,7 +28,7 @@ namespace CourseGuideProject1
 		{
 			base.ViewDidLoad();
 			View.BackgroundColor = UIColor.Black;
-			Institution1Table.Source = new TopicTableViewSource(institutionsArray, rowColorArray);
+			Institution1Table.Source = new Institution1TableViewSource(institutionsArray, rowColorArray);
 		}
     }
 }

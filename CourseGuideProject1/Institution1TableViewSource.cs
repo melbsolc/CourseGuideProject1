@@ -45,7 +45,7 @@ namespace CourseGuideProject1
 
 		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
 		{
-			return 70f;
+			return 90f;
 		}
 	}
 }

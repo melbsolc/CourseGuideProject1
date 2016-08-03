@@ -240,12 +240,15 @@
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="463">
                                             <rect key="frame" x="20" y="0.0" width="560" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue id="594" destination="526" kind="show" identifier="CourseWebSegue"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -260,6 +263,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="461" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2552" y="169"/>
+        </scene>
+        <scene sceneID="525">
+            <objects>
+                <viewController id="526" sceneMemberID="viewController" customClass="CourseWebViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="523"/>
+                        <viewControllerLayoutGuide type="bottom" id="524"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="527">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="610" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="611" firstItem="610" firstAttribute="top" secondItem="527" secondAttribute="top"/>
+                            <constraint id="612" firstItem="610" firstAttribute="leading" secondItem="527" secondAttribute="leading"/>
+                            <constraint id="613" firstItem="527" firstAttribute="trailing" secondItem="610" secondAttribute="trailing"/>
+                            <constraint id="614" firstItem="527" firstAttribute="bottom" secondItem="610" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CourseWebView" destination="610" id="name-outlet-610"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="528" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3277" y="170"/>
         </scene>
     </scenes>
 </document>
