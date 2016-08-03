@@ -7,6 +7,8 @@ namespace CourseGuideProject1
 {
 	public class QualificationTableViewSource : UITableViewSource
 	{
+		string cellIdentifier = "qualificationCellID";
+
 		List<Qualification> qualificationsList;
 		List<UIColor> bachelorColors;
 		List<UIColor> postgraduateColors;
@@ -30,7 +32,12 @@ namespace CourseGuideProject1
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
-			var cell = tableView.DequeueReusableCell("qualificationCellID");
+			var cell = tableView.DequeueReusableCell(cellIdentifier);
+
+			if (cell == null)
+			{
+				cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
+			}
 
 			if (indexPath.Section == 0)
 			{

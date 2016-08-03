@@ -7,6 +7,7 @@ namespace CourseGuideProject1
     public partial class TopicTableViewController : UITableViewController
     {
 		string[] topicArray = new string[] { "Arts", "Law", "Business", "Technology", "Engineering", "Science", "Other" };
+
 		UIColor[] rowColorArray = new UIColor[] {
 			new UIColor(255/255.0f, 102/255.0f, 102/255.0f, 1.0f),
 			new UIColor(204/255.0f, 204/255.0f, 0/255.0f, 1.0f),

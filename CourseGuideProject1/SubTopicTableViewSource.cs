@@ -7,6 +7,8 @@ namespace CourseGuideProject1
 {
 	public class SubTopicTableViewSource : UITableViewSource
 	{
+		string cellIdentifier = "subTopicCellID";
+
 		List<string> subTopicsList;
 		List<UIColor> subTopicColors;
 
@@ -28,7 +30,12 @@ namespace CourseGuideProject1
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
-			var cell = tableView.DequeueReusableCell("subTopicCellID");
+			var cell = tableView.DequeueReusableCell(cellIdentifier);
+
+			if (cell == null)
+			{
+				cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
+			}
 
 			cell.TextLabel.Text = subTopicsList[indexPath.Row];
 			cell.BackgroundColor = subTopicColors[indexPath.Row];

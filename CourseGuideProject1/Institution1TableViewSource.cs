@@ -4,18 +4,18 @@ using Foundation;
 
 namespace CourseGuideProject1
 {
-	public class TopicTableViewSource : UITableViewSource
+	public class Institution1TableViewSource : UITableViewSource
 	{
-		string cellIdentifier = "topicCellID";
+		string cellIdentifier = "institutionCellID";
 
-		string[] topicsArray;
+		string[] institutionsArray;
 
-		UIColor[] topicColorArray; 
+		UIColor[] institutionsColorArray;
 
-		public TopicTableViewSource(string[] topics, UIColor[] colors)
+		public Institution1TableViewSource(string[] institutions, UIColor[] colors)
 		{
-			topicsArray = topics;
-			topicColorArray = colors;
+			institutionsArray = institutions;
+			institutionsColorArray = colors;
 		}
 
 		public override nint NumberOfSections(UITableView tableView)
@@ -25,7 +25,7 @@ namespace CourseGuideProject1
 
 		public override nint RowsInSection(UITableView tableview, nint section)
 		{
-			return topicsArray.Length;
+			return institutionsArray.Length;
 		}
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -37,15 +37,15 @@ namespace CourseGuideProject1
 				cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
 			}
 
-			cell.TextLabel.Text = topicsArray[indexPath.Row];
-			cell.BackgroundColor = topicColorArray[indexPath.Row];
+			cell.TextLabel.Text = institutionsArray[indexPath.Row];
+			cell.BackgroundColor = institutionsColorArray[indexPath.Row];
 
 			return cell;
 		}
 
 		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
 		{
-			return 100f;
+			return 70f;
 		}
 	}
 }
