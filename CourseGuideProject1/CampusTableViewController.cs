@@ -67,5 +67,20 @@ namespace CourseGuideProject1
 				return blankArray;
 			}
 		}
+
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+		{
+			if (segue.Identifier.Equals("CampusMapSegue"))
+			{
+				var viewController = segue.DestinationViewController as CampusMapViewController;
+				if (viewController != null)
+				{
+					var rowPath = CampusTable.IndexPathForSelectedRow;
+					var campus = campusArray[rowPath.Row];
+					viewController.institutionName = instituteName;
+					viewController.campusName = campus;
+				}
+			}    
+		}
     }
 }
