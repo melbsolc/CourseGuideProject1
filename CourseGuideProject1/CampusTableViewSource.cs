@@ -39,13 +39,14 @@ namespace CourseGuideProject1
 
 			cell.TextLabel.Text = campusArray[indexPath.Row];
 			cell.BackgroundColor = campusRowColorArray[indexPath.Row];
+			//cell.ImageView.Image = UIImage.FromBundle("Mapicon.png");
 
 			return cell;
 		}
 
 		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
 		{
-			return 70f;
+			return 140f;
 		}
 
 

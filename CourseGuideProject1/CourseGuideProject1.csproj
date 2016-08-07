@@ -94,9 +94,33 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Spotlight-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Spotlight-40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Spotlight-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-72.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-iPadPro%402x.png" />
+    <ImageAsset Include="Assets.xcassets\MapIcon.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\MapIcon.png.imageset\Icon-60.png" />
+    <ImageAsset Include="Assets.xcassets\MapIcon.png.imageset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\MapIcon.png.imageset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\MapIcon.png.imageset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\MapIcon.png.imageset\Icon-76%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\MapIcon.png.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

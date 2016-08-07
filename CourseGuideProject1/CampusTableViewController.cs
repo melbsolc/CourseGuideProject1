@@ -36,6 +36,7 @@ namespace CourseGuideProject1
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+			View.BackgroundColor = UIColor.Black;
 			campusArray = getCampusArray();
 			CampusTable.Source = new CampusTableViewSource(campusArray, rowColorArray);
 		}
