@@ -8,11 +8,9 @@ namespace CourseGuideProject1
 {
     public partial class CampusMapViewController : UIViewController
     {
+		// Variable declarations
 		public string institutionName;
 		public string campusName;
-
-		//CLLocation location;
-
 		Double campusLatitude;
 		Double campusLongitude;
 
@@ -20,13 +18,18 @@ namespace CourseGuideProject1
         {
         }
 
+
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
+			// Function calls
 			setCampusCoordinates();
 			setMap();
 		}
 
+		// Sets the co-ordinates according to the
+		// institution and campus
 		void setCampusCoordinates()
 		{
 			if (institutionName == "Deakin University")
@@ -62,16 +65,21 @@ namespace CourseGuideProject1
 			}
 		}
 
+		// Creates the map, using the specified co-ordinates
+		// Creates and adds a pin with the specified title to the map
 		void setMap()
 		{
+			// https://developer.xamarin.com/recipes/ios/content_controls/map_view/display_a_location/
 			var coordinate = new CLLocationCoordinate2D(campusLatitude, campusLongitude);
 			var region = new MKCoordinateRegion(coordinate, new MKCoordinateSpan(0.05, 0.05));
 
 			CampusMap.SetRegion(region, true);
 
+			// https://developer.xamarin.com/recipes/ios/content_controls/map_view/add_an_annotation_to_a_map/
 			var pin = new MKPointAnnotation();
 			pin.Coordinate = coordinate;
-			pin.Title = institutionName + " - " + campusName;
+			pin.Title =  campusName;
+			pin.Subtitle = institutionName;
 			CampusMap.AddAnnotation(pin);
 		}
 

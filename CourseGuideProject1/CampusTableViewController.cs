@@ -6,8 +6,10 @@ namespace CourseGuideProject1
 {
     public partial class CampusTableViewController : UITableViewController
     {
+		// Variable declaration
 		public string instituteName;
 
+		// Arrays of campuses for each institution
 		string[] deakinCampusArray = { "Burwood (Melbourne)", "Waurn Ponds (Geelong)", "Waterfront (Geelong)",
 			"Warrnambool" };
 
@@ -19,6 +21,7 @@ namespace CourseGuideProject1
 
 		string[] campusArray;
 
+ 		// Array of Colourss
 		UIColor[] rowColorArray = new UIColor[] {
 			new UIColor(255/255.0f, 102/255.0f, 102/255.0f, 1.0f),
 			new UIColor(204/255.0f, 204/255.0f, 0/255.0f, 1.0f),
@@ -36,11 +39,19 @@ namespace CourseGuideProject1
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+			// Set the background colour to black
 			View.BackgroundColor = UIColor.Black;
+
+			// assigns the result of the function call to campusArray
 			campusArray = getCampusArray();
+
+			// Set the Campus Table's source to a new instance of the
+			// custom table view source CampusTableViewSource passing in the campus array 
+			// and colour arrayy
 			CampusTable.Source = new CampusTableViewSource(campusArray, rowColorArray);
 		}
 
+		// This function returns the campus array based on the institution
 		string[] getCampusArray()
 		{
 			if (instituteName == "Deakin University")
@@ -69,6 +80,9 @@ namespace CourseGuideProject1
 			}
 		}
 
+		// This function is called when a campus is selected and the user is directed
+		// to the map page. It passes the institution and campus names to 
+		// the map page.
 		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
 		{
 			if (segue.Identifier.Equals("CampusMapSegue"))

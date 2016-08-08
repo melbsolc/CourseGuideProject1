@@ -48,8 +48,6 @@ namespace CourseGuideProject1
 		{
 			return 140f;
 		}
-
-
 	}
 }
 
