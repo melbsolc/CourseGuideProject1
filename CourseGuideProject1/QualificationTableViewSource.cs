@@ -77,7 +77,7 @@ namespace CourseGuideProject1
 		// Set height for each row
 		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
 		{
-			return 70f;
+			return 120f;
 		}
 
 		// Set the view of the header for each section

@@ -6,7 +6,10 @@ namespace CourseGuideProject1
 {
     public partial class Institution1TableViewController : UITableViewController
     {
- 		// Array of institutionss
+		
+		public string courseName;
+
+		// Array of institutionss
 		string[] institutionsArray = new string[] { "Deakin University", "Monash University",
 			"RMIT University", "Swinburne University", "The University of Melbourne", "Victoria University" };
 
@@ -35,6 +38,21 @@ namespace CourseGuideProject1
 			// custom table view source Institution1TableViewSource passing in the institutions array 
 			// and colour array
 			Institution1Table.Source = new Institution1TableViewSource(institutionsArray, rowColorArray);
+		}
+
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+		{
+			if (segue.Identifier.Equals("CourseWebSegue"))
+			{
+				var viewController = segue.DestinationViewController as CourseWebViewController;
+				if (viewController != null)
+				{
+					var rowPath = Institution1Table.IndexPathForSelectedRow;
+					var institution = institutionsArray[rowPath.Row];
+					viewController.institutionName = institution;
+					viewController.courseName = courseName;
+				}
+			}
 		}
     }
 }

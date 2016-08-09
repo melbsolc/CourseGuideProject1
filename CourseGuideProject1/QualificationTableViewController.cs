@@ -98,6 +98,20 @@ namespace CourseGuideProject1
 			} // end of for with variable i
 		}
 
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+		{
+			if (segue.Identifier.Equals("Institution1Segue"))
+			{
+				var viewController = segue.DestinationViewController as Institution1TableViewController;
+				if (viewController != null)
+				{
+					var rowPath = QualificationTable.IndexPathForSelectedRow;
+					var course = qualificationsList[rowPath.Section].degreeNames[rowPath.Row];
+					viewController.courseName = course;
+				}
+			}
+		}
+
     }
 
 	// Qualification class declaration
