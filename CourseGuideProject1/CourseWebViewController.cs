@@ -38,27 +38,33 @@ namespace CourseGuideProject1
 			{
 				if (courseName == "Bachelor of Arts")
 				{
-					courseURL = "https://www.deakin.edu.au/course/bachelor-of-arts-humanities-and-social-science";
+					courseURL = "https://www.deakin.edu.au/course/" +
+						"bachelor-of-arts-humanities-and-social-science";
 				}
 				else if (courseName == "Bachelor of Creative Arts (Animation and Motion Capture)")
 				{
-					courseURL = "https://www.deakin.edu.au/course/bachelor-of-creative-arts-animation-and-motion-capture-arts-humanities-and-social-science";
+					courseURL = "https://www.deakin.edu.au/course/" +
+						"bachelor-of-creative-arts-animation-and-motion-capture-arts-humanities-and-social-science";
 				}
 				else if (courseName == "Bachelor of Creative Arts (Honours)")
 				{
-					courseURL = "https://www.deakin.edu.au/course/bachelor-of-creative-arts-honours-performing-and-creative-arts";
+					courseURL = "https://www.deakin.edu.au/course/" + 
+						"bachelor-of-creative-arts-honours-performing-and-creative-arts";
 				}
 				else if (courseName == "Graduate Diploma of Creative Arts")
 				{
-					courseURL = "https://www.deakin.edu.au/course/graduate-diploma-of-creative-arts-performing-and-creative-arts";
+					courseURL = "https://www.deakin.edu.au/course/" + 
+						"graduate-diploma-of-creative-arts-performing-and-creative-arts";
 				}
 				else if (courseName == "Master of Creative Arts")
 				{
-					courseURL = "https://www.deakin.edu.au/course/master-of-creative-arts-performing-and-creative-arts";
+					courseURL = "https://www.deakin.edu.au/course/" + 
+						"master-of-creative-arts-performing-and-creative-arts";
 				}
 				else if (courseName == "Research Degree - Doctor of Philosophy")
 				{
-					courseURL = "https://www.deakin.edu.au/future-students/courses/course.php?course=A900&area=BFOS-PERFORM-ARTS&stutype=local&continue=Continue";
+					courseURL = "https://www.deakin.edu.au/future-students/courses/" +
+						"course.php?course=A900&area=BFOS-PERFORM-ARTS&stutype=local&continue=Continue";
 				}
 				else
 				{
