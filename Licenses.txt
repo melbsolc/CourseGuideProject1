@@ -1,0 +1,21 @@
+Licenses For Icons Used in Project
+
+Site Name:  Icon Archive
+Site Address: www.iconarchive.com
+
+Filename: Categories-applications-education-university-icon.png
+Site Address: www.iconarchive.com/show/oxygen-icons-by-oxygen-icons.org/Categories-applications-education-university-icon.html
+
+Artist: Oxygen Team
+Iconset: Oxygen Icons (883 icons)
+License: GNU Lesser General Public License
+Commercial usage: Allowed
+
+Filename: Maps-icon.png
+Site Address: www.iconarchive.com/show/openphone-icons-by-wairwick/Maps-icon.html
+
+Artist: Wairwick
+Iconset: openPhone Icons (12 icons)
+License: GNU General Public License
+Commercial usage: Allowed
+
