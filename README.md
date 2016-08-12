@@ -1,6 +1,8 @@
 # CourseGuideProject1
 Second version of app for project 1 - CourseGuide
 
+**Project is a prototype of a mobile app**
+
 ## Project Link
 https://github.com/melbsolc/CourseGuideProject1
 
